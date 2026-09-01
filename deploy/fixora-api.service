@@ -1,0 +1,20 @@
+[Unit]
+Description=Fixora API
+After=network.target postgresql.service redis.service
+
+[Service]
+Type=simple
+User=fixora
+Group=fixora
+WorkingDirectory=/srv/fixora/backend
+EnvironmentFile=/etc/fixora/fixora.env
+ExecStart=/srv/fixora/backend/.venv/bin/uvicorn fixora.main:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/fixora
+
+[Install]
+WantedBy=multi-user.target
+

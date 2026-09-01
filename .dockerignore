@@ -1,0 +1,14 @@
+.git
+.DS_Store
+.env
+backend/.env
+backend/.venv
+backend/.pytest_cache
+backend/.ruff_cache
+backend/data
+web/node_modules
+web/dist
+web/.vite
+*.pyc
+__pycache__
+

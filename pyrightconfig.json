@@ -1,0 +1,13 @@
+{
+    "venvPath": "backend",
+    "venv": ".venv",
+    "include": [
+      "backend/fixora",
+      "backend/migrations",
+      "backend/tests",
+      "backend/scripts",
+    ],
+    "extraPaths": [
+      "backend"
+    ]
+  }
